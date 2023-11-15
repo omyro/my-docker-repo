@@ -10,6 +10,9 @@ RUN yum -y update
 # install apache
 RUN yum install -y httpd
 
+#Copy web app from local to the container
+COPY index.html /var/www/html/
+
 # port on which the app should listen on
 EXPOSE 80
 
